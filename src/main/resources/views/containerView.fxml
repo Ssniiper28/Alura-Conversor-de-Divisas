@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.SVGPath?>
+
+<Pane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.com.alura.conversoralura.AppController">
+   <children>
+      <MenuBar prefHeight="30.0" prefWidth="400.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <HBox alignment="CENTER" layoutX="327.0" layoutY="-3.0" prefHeight="35.0" prefWidth="80.0" spacing="10.0">
+         <children>
+            <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance -9.1743% , center 52.2026% 48.4848%, radius 64.6789%, #2677f2 0.0%, #002376 100.0%);" stylesheets="@../assets/style.css">
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="minimize" />
+               </styleClass>
+               <graphic>
+                  <SVGPath content="M10,1.344c-4.781,0-8.656,3.875-8.656,8.656c0,4.781,3.875,8.656,8.656,8.656c4.781,0,8.656-3.875,8.656-8.656C18.656,5.219,14.781,1.344,10,1.344z M10,17.903c-4.365,0-7.904-3.538-7.904-7.903S5.635,2.096,10,2.096S17.903,5.635,17.903,10S14.365,17.903,10,17.903z M13.388,9.624H6.613c-0.208,0-0.376,0.168-0.376,0.376s0.168,0.376,0.376,0.376h6.775c0.207,0,0.377-0.168,0.377-0.376S13.595,9.624,13.388,9.624z" scaleX="1.6" scaleY="1.6" strokeWidth="2.0" />
+               </graphic>
+               <textFill>
+                  <RadialGradient centerX="0.5220264317180617" centerY="0.48484848123608204" focusDistance="-0.09174303177299847" radius="0.6467890695694389">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.1473684161901474" green="0.4673684239387512" blue="0.9473684430122375" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color green="0.13894736766815186" blue="0.46315789222717285" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance -9.1743% , center 52.2026% 48.4848%, radius 64.6789%, #ff0000 0.0%, #990505 100.0%);" stylesheets="@../assets/style.css">
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="close" />
+               </styleClass>
+               <graphic>
+                  <SVGPath content="M12.71,7.291c-0.15-0.15-0.393-0.15-0.542,0L10,9.458L7.833,7.291c-0.15-0.15-0.392-0.15-0.542,0c-0.149,0.149-0.149,0.392,0,0.541L9.458,10l-2.168,2.167c-0.149,0.15-0.149,0.393,0,0.542c0.15,0.149,0.392,0.149,0.542,0L10,10.542l2.168,2.167c0.149,0.149,0.392,0.149,0.542,0c0.148-0.149,0.148-0.392,0-0.542L10.542,10l2.168-2.168C12.858,7.683,12.858,7.44,12.71,7.291z M10,1.188c-4.867,0-8.812,3.946-8.812,8.812c0,4.867,3.945,8.812,8.812,8.812s8.812-3.945,8.812-8.812C18.812,5.133,14.867,1.188,10,1.188z M10,18.046c-4.444,0-8.046-3.603-8.046-8.046c0-4.444,3.603-8.046,8.046-8.046c4.443,0,8.046,3.602,8.046,8.046C18.046,14.443,14.443,18.046,10,18.046z" scaleX="1.5" scaleY="1.5" strokeWidth="2.0" translateX="-0.2" />
+               </graphic>
+               <textFill>
+                  <RadialGradient centerX="0.5220264317180617" centerY="0.48484848123608204" focusDistance="-0.09174303177299847" radius="0.6467890695694389">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.6000000238418579" green="0.017777778208255768" blue="0.017777778208255768" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Button>
+         </children>
+      </HBox>
+      <VBox fx:id="container" alignment="CENTER" layoutY="30.0" prefHeight="570.0" prefWidth="400.0" />
+   </children>
+</Pane>

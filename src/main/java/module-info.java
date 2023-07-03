@@ -6,6 +6,6 @@ module mx.com.alura.conversoralura {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
 
-    opens mx.com.alura.conversoralura to javafx.fxml;
+    opens mx.com.alura.conversoralura;
     exports mx.com.alura.conversoralura;
 }

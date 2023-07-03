@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="570.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.com.alura.conversoralura.ConvMedidasController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <Label text="Convertidor de Longitudes">
+         <font>
+            <Font name="Agency FB" size="30.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="70.0" top="100.0" />
+         </VBox.margin>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="41.0" prefWidth="360.0" spacing="10.0" style="-fx-border-color: #b5b5b5; -fx-border-radius: 5px;">
+         <children>
+            <TextField fx:id="entrada" onKeyTyped="#convertir" prefHeight="26.0" prefWidth="150.0" promptText="500" />
+            <Separator orientation="VERTICAL" prefHeight="30.0" />
+            <ComboBox fx:id="fromCurrency" onAction="#convertir" prefWidth="150.0" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="30.0" layoutY="238.0" prefHeight="42.0" prefWidth="325.0" spacing="10.0" style="-fx-border-color: #b5b5b5; -fx-border-radius: 5px;">
+         <children>
+            <TextField fx:id="salida" editable="false" prefHeight="26.0" prefWidth="150.0" text="0.00" />
+            <Separator orientation="VERTICAL" prefHeight="30.0" />
+            <ComboBox fx:id="toCurrency" onAction="#convertir" prefWidth="150.0" />
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#regresar" text="Volver al Menu">
+         <VBox.margin>
+            <Insets top="150.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+</VBox>

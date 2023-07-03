@@ -1,0 +1,24 @@
+.btn{
+    -fx-background-color: #d2d2d2;
+    -fx-background-radius: 90px;
+    -fx-border-radius: 505px;
+}
+
+.btn SVGPath{
+    -fx-opacity: 0;
+    -fx-scale-shape: 2;
+    -fx-stroke-width: 1;
+}
+
+.close:hover{
+    -fx-background-color: red;
+}
+
+.minimize:hover{
+    -fx-background-color: #20adf6;
+}
+
+.btn:hover SVGPath{
+    -fx-opacity: 100;
+    -fx-stroke: #e8e8e8;
+}
