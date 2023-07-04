@@ -22,3 +22,34 @@
     -fx-opacity: 100;
     -fx-stroke: #e8e8e8;
 }
+
+.inputText{
+    -fx-border-color: red;
+    -fx-border-color: #04243c;
+    -fx-background-color: #F3F5FC;
+    -fx-border-width: 0 0 5 0;
+    -fx-text-fill: #04243c;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
+
+.background{
+    -fx-background-color: #F3F5FC;
+}
+
+.combo-box{
+    -fx-background-color: #052051;
+    -fx-text-fill: white;
+}
+
+.combo-box > .list-cell{
+    -fx-text-alignment: center;
+    -fx-text-fill: white;
+}
+
+.button {
+    -fx-background-color: #052051;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
+}

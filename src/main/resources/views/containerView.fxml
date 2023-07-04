@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
+<?import javafx.geometry.Point3D?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -15,79 +14,64 @@
 
 <Pane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.com.alura.conversoralura.AppController">
    <children>
-      <MenuBar prefHeight="30.0" prefWidth="400.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="File">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
-      <HBox alignment="CENTER" layoutX="327.0" layoutY="-3.0" prefHeight="35.0" prefWidth="80.0" spacing="10.0">
+      <MenuBar prefHeight="40.0" prefWidth="400.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 0.0% 100.0%, reflect, #303030 0.0%, #303030 0.6729%, #565656 4.5557%, #464646 5.7877%, #464646 92.8563%, #383838 95.4519%, #151515 100.0%); -fx-background-radius: 10 10 0 0;" />
+      <HBox alignment="CENTER" layoutX="320.0" layoutY="3.0" prefHeight="35.0" prefWidth="80.0" spacing="10.0">
          <children>
-            <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance -9.1743% , center 52.2026% 48.4848%, radius 64.6789%, #2677f2 0.0%, #002376 100.0%);" stylesheets="@../assets/style.css">
+            <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: radial-gradient(focus-angle 63.44deg, focus-distance -47.7064% , center 52.2026% 48.4848%, radius 51.8349%, #ffbd44 0.0%, #d19a3a 100.0%); -fx-border-color: #666; -fx-border-style: solid outside;" stylesheets="@../assets/style.css">
                <styleClass>
                   <String fx:value="btn" />
                   <String fx:value="minimize" />
                </styleClass>
-               <graphic>
-                  <SVGPath content="M10,1.344c-4.781,0-8.656,3.875-8.656,8.656c0,4.781,3.875,8.656,8.656,8.656c4.781,0,8.656-3.875,8.656-8.656C18.656,5.219,14.781,1.344,10,1.344z M10,17.903c-4.365,0-7.904-3.538-7.904-7.903S5.635,2.096,10,2.096S17.903,5.635,17.903,10S14.365,17.903,10,17.903z M13.388,9.624H6.613c-0.208,0-0.376,0.168-0.376,0.376s0.168,0.376,0.376,0.376h6.775c0.207,0,0.377-0.168,0.377-0.376S13.595,9.624,13.388,9.624z" scaleX="1.6" scaleY="1.6" strokeWidth="2.0" />
-               </graphic>
                <textFill>
-                  <RadialGradient centerX="0.5220264317180617" centerY="0.48484848123608204" focusDistance="-0.09174303177299847" radius="0.6467890695694389">
+                  <RadialGradient centerX="0.5220264317180617" centerY="0.48484848123608204" focusAngle="63.44" focusDistance="-0.47706411519181835" radius="0.5183487375941844">
                      <stops>
                         <Stop>
                            <color>
-                              <Color red="0.1473684161901474" green="0.4673684239387512" blue="0.9473684430122375" />
+                              <Color red="1.0" green="0.7411764860153198" blue="0.2666666805744171" />
                            </color>
                         </Stop>
                         <Stop offset="1.0">
                            <color>
-                              <Color green="0.13894736766815186" blue="0.46315789222717285" />
+                              <Color red="0.821052610874176" green="0.6036257147789001" blue="0.22807016968727112" />
                            </color>
                         </Stop>
                      </stops>
                   </RadialGradient>
                </textFill>
+               <graphic>
+                  <SVGPath content="M 25 50 L 28 50 C 29 50 29 51 28 51 L 25 51 C 24 51 24 50 25 50" scaleX="2.5" />
+               </graphic>
             </Button>
-            <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="20.0" prefWidth="20.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance -9.1743% , center 52.2026% 48.4848%, radius 64.6789%, #ff0000 0.0%, #990505 100.0%);" stylesheets="@../assets/style.css">
+            <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: radial-gradient(focus-angle 59.74deg, focus-distance -41.2844% , center 52.2026% 48.4848%, radius 48.1651%, #ff605c 0.0%, #a14040 100.0%); -fx-border-color: #666; -fx-border-width: 1.2; -fx-border-style: solid outside; -fx-background-radius: 500; -fx-border-radius: 500;" stylesheets="@../assets/style.css">
                <styleClass>
                   <String fx:value="btn" />
                   <String fx:value="close" />
                </styleClass>
-               <graphic>
-                  <SVGPath content="M12.71,7.291c-0.15-0.15-0.393-0.15-0.542,0L10,9.458L7.833,7.291c-0.15-0.15-0.392-0.15-0.542,0c-0.149,0.149-0.149,0.392,0,0.541L9.458,10l-2.168,2.167c-0.149,0.15-0.149,0.393,0,0.542c0.15,0.149,0.392,0.149,0.542,0L10,10.542l2.168,2.167c0.149,0.149,0.392,0.149,0.542,0c0.148-0.149,0.148-0.392,0-0.542L10.542,10l2.168-2.168C12.858,7.683,12.858,7.44,12.71,7.291z M10,1.188c-4.867,0-8.812,3.946-8.812,8.812c0,4.867,3.945,8.812,8.812,8.812s8.812-3.945,8.812-8.812C18.812,5.133,14.867,1.188,10,1.188z M10,18.046c-4.444,0-8.046-3.603-8.046-8.046c0-4.444,3.603-8.046,8.046-8.046c4.443,0,8.046,3.602,8.046,8.046C18.046,14.443,14.443,18.046,10,18.046z" scaleX="1.5" scaleY="1.5" strokeWidth="2.0" translateX="-0.2" />
-               </graphic>
                <textFill>
-                  <RadialGradient centerX="0.5220264317180617" centerY="0.48484848123608204" focusDistance="-0.09174303177299847" radius="0.6467890695694389">
+                  <RadialGradient centerX="0.5220264317180617" centerY="0.48484848123608204" focusAngle="59.74" focusDistance="-0.41284404982120615" radius="0.4816514373919285">
                      <stops>
                         <Stop>
                            <color>
-                              <Color red="1.0" />
+                              <Color red="1.0" green="0.3764705955982208" blue="0.3607843220233917" />
                            </color>
                         </Stop>
                         <Stop offset="1.0">
                            <color>
-                              <Color red="0.6000000238418579" green="0.017777778208255768" blue="0.017777778208255768" />
+                              <Color red="0.6315789222717285" green="0.2526315748691559" blue="0.2526315748691559" />
                            </color>
                         </Stop>
                      </stops>
                   </RadialGradient>
                </textFill>
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+               <graphic>
+                  <SVGPath content="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" scaleX="1.5" scaleY="1.5" />
+               </graphic>
             </Button>
          </children>
       </HBox>
-      <VBox fx:id="container" alignment="CENTER" layoutY="30.0" prefHeight="570.0" prefWidth="400.0" />
+      <VBox fx:id="container" alignment="CENTER" layoutY="39.0" prefHeight="560.0" prefWidth="400.0" />
    </children>
 </Pane>

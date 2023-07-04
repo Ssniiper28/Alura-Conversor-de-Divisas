@@ -2,12 +2,15 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
 
 <VBox alignment="TOP_CENTER" prefHeight="570.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.com.alura.conversoralura.MenuController">
    <children>
@@ -22,25 +25,45 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="190.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#initConvertidor" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 10;" text="Convertidor de Moneda" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="190.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#initConvertidor" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #04243c; -fx-background-radius: 20;" text="Conversion de Monedas" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <graphic>
-                  <ImageView fitHeight="98.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="83.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../assets/exchange.png" />
                      </image>
                   </ImageView>
                </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow height="16.38" offsetX="5.0" offsetY="5.0" radius="10.0275" width="25.73">
+                     <color>
+                        <Color red="0.6631578803062439" green="0.6631578803062439" blue="0.6631578803062439" />
+                     </color>
+                  </DropShadow>
+               </effect>
             </Button>
-            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="32.0" layoutY="28.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#initMedidas" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 10;" text="Convertidor de Moneda" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="32.0" layoutY="28.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#initMedidas" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #04243c; -fx-background-radius: 20;" text="Conversion de Medidas" textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER">
                <graphic>
-                  <ImageView fitHeight="98.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="98.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true" rotate="-15.0" scaleX="1.5" scaleY="1.5">
                      <image>
-                        <Image url="@../assets/exchange.png" />
+                        <Image url="@../assets/length_icon.png" />
                      </image>
                   </ImageView>
                </graphic>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow height="16.38" offsetX="5.0" offsetY="5.0" radius="10.0275" width="25.73">
+                     <color>
+                        <Color red="0.6631578803062439" green="0.6631578803062439" blue="0.6631578803062439" />
+                     </color>
+                  </DropShadow>
+               </effect>
             </Button>
-            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="205.0" layoutY="28.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 10;" text="Convertidor de Moneda" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="205.0" layoutY="28.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#initConvertidor" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #04243c; -fx-background-radius: 20;" text="Cambio de Moneda" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                <graphic>
                   <ImageView fitHeight="98.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -48,8 +71,18 @@
                      </image>
                   </ImageView>
                </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow height="16.38" offsetX="5.0" offsetY="5.0" radius="10.0275" width="25.73">
+                     <color>
+                        <Color red="0.6631578803062439" green="0.6631578803062439" blue="0.6631578803062439" />
+                     </color>
+                  </DropShadow>
+               </effect>
             </Button>
-            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="216.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 10;" text="Convertidor de Moneda" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="216.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#initConvertidor" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #04243c; -fx-background-radius: 20;" text="Cambio de Moneda" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                <graphic>
                   <ImageView fitHeight="98.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -57,8 +90,18 @@
                      </image>
                   </ImageView>
                </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow height="16.38" offsetX="5.0" offsetY="5.0" radius="10.0275" width="25.73">
+                     <color>
+                        <Color red="0.6631578803062439" green="0.6631578803062439" blue="0.6631578803062439" />
+                     </color>
+                  </DropShadow>
+               </effect>
             </Button>
-            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="205.0" layoutY="216.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 10;" text="Convertidor de Moneda" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="205.0" layoutY="216.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#initConvertidor" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #04243c; -fx-background-radius: 20;" text="Cambio de Moneda" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <graphic>
                   <ImageView fitHeight="98.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -66,8 +109,18 @@
                      </image>
                   </ImageView>
                </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow height="16.38" offsetX="5.0" offsetY="5.0" radius="10.0275" width="25.73">
+                     <color>
+                        <Color red="0.6631578803062439" green="0.6631578803062439" blue="0.6631578803062439" />
+                     </color>
+                  </DropShadow>
+               </effect>
             </Button>
-            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="403.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" style="-fx-background-radius: 10;" text="Convertidor de Moneda" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" layoutX="10.0" layoutY="403.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#initConvertidor" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #04243c; -fx-background-radius: 20;" text="Cambio de Moneda" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <graphic>
                   <ImageView fitHeight="98.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -75,6 +128,16 @@
                      </image>
                   </ImageView>
                </graphic>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow height="16.38" offsetX="5.0" offsetY="5.0" radius="10.0275" width="25.73">
+                     <color>
+                        <Color red="0.6631578803062439" green="0.6631578803062439" blue="0.6631578803062439" />
+                     </color>
+                  </DropShadow>
+               </effect>
             </Button>
          </children>
       </GridPane>

@@ -34,7 +34,7 @@ public class ConvertidorController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Limitar el TextField a que solo acepte numeros double con 2 decimales maximo
         TextFormatter<Double> textFormatter = new TextFormatter(new FixedDecimalConverter(2), 78, new FixedDecimalFilter());
-        textFormatter.valueProperty().bindBidirectional(valueProperty);
+        textFormatter.valueProperty().bind(valueProperty);
         entrada.setTextFormatter(textFormatter);
         salida.setTextFormatter(new TextFormatter(new FixedDecimalConverter(2)));
         salida.setText("0.00");
@@ -66,5 +66,11 @@ public class ConvertidorController implements Initializable {
     @FXML
     public void regresar(Event event) throws IOException {
         AppController.menu();
+    }
+
+    @FXML
+    public void reset(Event event) {
+        System.out.println(event);
+        entrada.setText("");
     }
 }

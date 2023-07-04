@@ -36,7 +36,7 @@ public class ConvMedidasController implements Initializable{
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Limitar el TextField a que solo acepte numeros double con 2 decimales maximo
         TextFormatter<Double> textFormatter = new TextFormatter(new FixedDecimalConverter(2), 78, new FixedDecimalFilter());
-        textFormatter.valueProperty().bindBidirectional(valueProperty);
+        textFormatter.valueProperty().bind(valueProperty);
         entrada.setTextFormatter(textFormatter);
         salida.setTextFormatter(new TextFormatter(new FixedDecimalConverter(2)));
         salida.setText("0.00");
@@ -70,4 +70,8 @@ public class ConvMedidasController implements Initializable{
         AppController.menu();
     }
 
+    @FXML
+    public void reset(Event event) {
+        entrada.setText("");
+    }
 }
