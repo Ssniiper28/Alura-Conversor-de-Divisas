@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -10,7 +11,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="container" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="400.0" spacing="30.0" styleClass="background" stylesheets="@../assets/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.com.alura.conversoralura.MenuController">
+<VBox fx:id="container" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="400.0" spacing="30.0" style="-fx-background-radius: 0 0 10 10;" styleClass="background" stylesheets="@../assets/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.com.alura.conversoralura.MenuController">
    <children>
       <HBox alignment="CENTER" spacing="20.0">
          <children>
@@ -56,16 +57,23 @@
       </HBox>
       <HBox alignment="CENTER" spacing="20.0">
          <children>
-            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#initConvertidor" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #04243c; -fx-background-radius: 20;" text="Cambio de Moneda" textFill="WHITE">
+            <Button alignment="CENTER" contentDisplay="BOTTOM" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#initConvArea" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #04243c; -fx-background-radius: 20;" text="Conversion de Areas" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <graphic>
-                  <ImageView fitHeight="98.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="98.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../assets/exchange.png" />
+                        <Image url="@../assets/iconoArea.png" />
                      </image>
+                     <effect>
+                        <InnerShadow choke="1.0" height="70.13" radius="46.8475" width="119.26">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
                   </ImageView>
                </graphic>
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
                <effect>
                   <DropShadow height="16.38" offsetX="5.0" offsetY="5.0" radius="10.0275" width="25.73">
@@ -75,58 +83,23 @@
                   </DropShadow>
                </effect>
             </Button>
-            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#initConvertidor" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #04243c; -fx-background-radius: 20;" text="Cambio de Moneda" textFill="WHITE">
+            <Button alignment="CENTER" contentDisplay="BOTTOM" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#initConvMasa" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #04243c; -fx-background-radius: 20;" text="Conversion de Masa" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <graphic>
-                  <ImageView fitHeight="98.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="70.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../assets/exchange.png" />
+                        <Image url="@../assets/iconoMasa.png" />
                      </image>
+                     <effect>
+                        <InnerShadow blurType="ONE_PASS_BOX" choke="0.78" height="15.0" radius="8.17" width="19.68">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
                   </ImageView>
                </graphic>
                <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-               <effect>
-                  <DropShadow height="16.38" offsetX="5.0" offsetY="5.0" radius="10.0275" width="25.73">
-                     <color>
-                        <Color red="0.6631578803062439" green="0.6631578803062439" blue="0.6631578803062439" />
-                     </color>
-                  </DropShadow>
-               </effect>
-            </Button>
-         </children>
-      </HBox>
-      <HBox alignment="CENTER" spacing="20.0">
-         <children>
-            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#initConvertidor" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #04243c; -fx-background-radius: 20;" text="Cambio de Moneda" textFill="WHITE">
-               <graphic>
-                  <ImageView fitHeight="98.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../assets/exchange.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-               <effect>
-                  <DropShadow height="16.38" offsetX="5.0" offsetY="5.0" radius="10.0275" width="25.73">
-                     <color>
-                        <Color red="0.6631578803062439" green="0.6631578803062439" blue="0.6631578803062439" />
-                     </color>
-                  </DropShadow>
-               </effect>
-            </Button>
-            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#initConvertidor" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: #04243c; -fx-background-radius: 20;" text="Cambio de Moneda" textFill="WHITE">
-               <graphic>
-                  <ImageView fitHeight="98.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../assets/exchange.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
                <effect>
                   <DropShadow height="16.38" offsetX="5.0" offsetY="5.0" radius="10.0275" width="25.73">
@@ -138,6 +111,7 @@
             </Button>
          </children>
       </HBox>
+      <HBox alignment="CENTER" spacing="20.0" />
    </children>
    <padding>
       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

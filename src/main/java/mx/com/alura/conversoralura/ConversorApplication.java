@@ -3,6 +3,7 @@ package mx.com.alura.conversoralura;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -16,7 +17,8 @@ public class ConversorApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), Color.TRANSPARENT);
         stage.initStyle(StageStyle.TRANSPARENT);
         stage.setResizable(false);
-        stage.setTitle("Hello!");
+        stage.setTitle("Conversor Alura");
+        stage.getIcons().add(new Image(ConversorApplication.class.getResourceAsStream("/assets/exchange.png")));
         stage.setScene(scene);
         stage.show();
     }

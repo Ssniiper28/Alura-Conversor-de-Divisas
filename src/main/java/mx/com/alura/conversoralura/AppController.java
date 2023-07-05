@@ -63,8 +63,6 @@ public class AppController {
     public void setCoordinates(MouseEvent event){
         xOffset = menuBar.getScene().getWindow().getX() - event.getScreenX();
         yOffset = menuBar.getScene().getWindow().getY() - event.getScreenY();
-        System.out.println(xOffset + "  " + yOffset);
-
     }
 
     @FXML

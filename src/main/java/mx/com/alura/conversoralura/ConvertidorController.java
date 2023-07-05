@@ -7,12 +7,14 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ComboBox;
 import models.Convertidor;
 import models.Currency;
 import javafx.event.Event;
+import models.Unit;
 
 import java.io.IOException;
 import java.net.URL;
@@ -24,11 +26,15 @@ public class ConvertidorController implements Initializable {
     @FXML
     private TextField entrada;
     @FXML
-    private ComboBox<Currency> fromCurrency;
+    private ComboBox<Unit> fromCurrency;
     @FXML
     private TextField salida;
     @FXML
-    private ComboBox<Currency> toCurrency;
+    private ComboBox<Unit> toCurrency;
+
+    public static String conversionType = "";
+    @FXML
+    private Label title;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -39,14 +45,7 @@ public class ConvertidorController implements Initializable {
         salida.setTextFormatter(new TextFormatter(new FixedDecimalConverter(2)));
         salida.setText("0.00");
         // Inicializar ComboBox con la lista del convertidor
-        fromCurrency.setItems(FXCollections.observableArrayList(
-                convertidor.getCurrencies()
-        ));
-
-        toCurrency.setItems(FXCollections.observableArrayList(
-                convertidor.getCurrencies()
-        ));
-
+        setConversionModel();
         // Seleccionar opciones por defecto
         fromCurrency.getSelectionModel().select(0);
         toCurrency.getSelectionModel().select(1);
@@ -63,7 +62,7 @@ public class ConvertidorController implements Initializable {
 
     }
 
-    @FXML
+    @Deprecated
     public void regresar(Event event) throws IOException {
         AppController.menu();
     }
@@ -71,5 +70,46 @@ public class ConvertidorController implements Initializable {
     @FXML
     public void reset(Event event) {
         entrada.selectAll();
+    }
+
+    private void setConversionModel(){
+        switch (conversionType){
+            case "moneda":
+                title.setText("Conversor de Monedas");
+                fromCurrency.setItems(FXCollections.observableArrayList(
+                        convertidor.getCurrencies()
+                ));
+                toCurrency.setItems(FXCollections.observableArrayList(
+                        convertidor.getCurrencies()
+                ));
+                break;
+            case "longitud":
+                title.setText("Conversor de Medidas");
+                fromCurrency.setItems(FXCollections.observableArrayList(
+                        convertidor.getLengths()
+                ));
+                toCurrency.setItems(FXCollections.observableArrayList(
+                        convertidor.getLengths()
+                ));
+                break;
+            case "area":
+                title.setText("Conversor de Areas");
+                fromCurrency.setItems(FXCollections.observableArrayList(
+                        convertidor.getAreas()
+                ));
+                toCurrency.setItems(FXCollections.observableArrayList(
+                        convertidor.getAreas()
+                ));
+                break;
+            case "masa":
+                title.setText("Conversor de Masas");
+                fromCurrency.setItems(FXCollections.observableArrayList(
+                        convertidor.getMasses()
+                ));
+                toCurrency.setItems(FXCollections.observableArrayList(
+                        convertidor.getMasses()
+                ));
+                break;
+        }
     }
 }

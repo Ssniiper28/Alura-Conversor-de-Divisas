@@ -22,11 +22,25 @@ public class MenuController {
 
     @FXML
     public void initConvertidor() throws IOException {
+        ConvertidorController.conversionType = "moneda";
         AppController.setVista("convertidor.fxml");
     }
 
     @FXML
     public void initMedidas() throws IOException{
-        AppController.setVista("convertidorMedidas.fxml");
+        ConvertidorController.conversionType = "longitud";
+        AppController.setVista("convertidor.fxml");
+    }
+
+    @FXML
+    public void initConvArea() throws IOException{
+        ConvertidorController.conversionType = "area";
+        AppController.setVista("convertidor.fxml");
+    }
+
+    @FXML
+    public void initConvMasa() throws IOException {
+        ConvertidorController.conversionType = "masa";
+        AppController.setVista("convertidor.fxml");
     }
 }

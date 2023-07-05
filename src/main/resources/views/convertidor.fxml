@@ -6,8 +6,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
 <VBox alignment="TOP_CENTER" prefHeight="560.0" prefWidth="400.0" styleClass="background" stylesheets="@../assets/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.com.alura.conversoralura.ConvertidorController">
@@ -15,19 +17,26 @@
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
    <children>
-      <Label text="Convertidor de Moneda" textFill="#052051" wrapText="true">
+      <Label fx:id="title" text="Convertidor de Moneda" textAlignment="CENTER" textFill="#052051" wrapText="true">
          <font>
             <Font name="Agency FB Bold" size="40.0" />
          </font>
          <VBox.margin>
             <Insets bottom="70.0" top="100.0" />
          </VBox.margin>
+         <effect>
+            <DropShadow height="0.0" offsetX="2.0" offsetY="2.0" radius="0.0" width="0.0">
+               <color>
+                  <Color red="0.7099999785423279" green="0.7099999785423279" blue="0.7099999785423279" opacity="0.4042552709579468" />
+               </color>
+            </DropShadow>
+         </effect>
       </Label>
       <HBox alignment="CENTER" prefHeight="41.0" prefWidth="360.0" spacing="10.0" style="-fx-border-color: #b5b5b5; -fx-border-radius: 5px;">
          <children>
-            <TextField fx:id="entrada" onKeyTyped="#convertir" onMouseClicked="#reset" prefHeight="30.0" prefWidth="235.0" promptText="500" styleClass="inputText" stylesheets="@../assets/style.css" />
+            <TextField fx:id="entrada" onKeyTyped="#convertir" onMouseClicked="#reset" prefHeight="30.0" prefWidth="180.0" promptText="500" styleClass="inputText" stylesheets="@../assets/style.css" />
             <Separator orientation="VERTICAL" prefHeight="30.0" />
-            <ComboBox fx:id="fromCurrency" onAction="#convertir" prefHeight="26.0" prefWidth="75.0" stylesheets="@../assets/style.css" />
+            <ComboBox fx:id="fromCurrency" onAction="#convertir" prefHeight="26.0" prefWidth="130.0" stylesheets="@../assets/style.css" />
          </children>
          <VBox.margin>
             <Insets bottom="20.0" />
@@ -35,14 +44,14 @@
       </HBox>
       <HBox alignment="CENTER" layoutX="30.0" layoutY="238.0" prefHeight="42.0" prefWidth="325.0" spacing="10.0" style="-fx-border-color: #b5b5b5; -fx-border-radius: 5px;">
          <children>
-            <TextField fx:id="salida" editable="false" prefHeight="26.0" prefWidth="235.0" styleClass="inputText" stylesheets="@../assets/style.css" text="0.00" />
+            <TextField fx:id="salida" editable="false" prefHeight="26.0" prefWidth="180.0" styleClass="inputText" stylesheets="@../assets/style.css" text="0.00" />
             <Separator orientation="VERTICAL" prefHeight="30.0" />
-            <ComboBox fx:id="toCurrency" onAction="#convertir" prefHeight="26.0" prefWidth="76.0" />
+            <ComboBox fx:id="toCurrency" onAction="#convertir" prefHeight="26.0" prefWidth="130.0" />
          </children>
       </HBox>
       <Button mnemonicParsing="false" onAction="#regresar" stylesheets="@../assets/style.css" text="Volver al Menu">
          <VBox.margin>
-            <Insets top="150.0" />
+            <Insets top="100.0" />
          </VBox.margin>
       </Button>
    </children>
