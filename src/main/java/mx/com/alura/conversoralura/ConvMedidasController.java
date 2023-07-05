@@ -72,6 +72,6 @@ public class ConvMedidasController implements Initializable{
 
     @FXML
     public void reset(Event event) {
-        entrada.setText("");
+        entrada.selectAll();
     }
 }

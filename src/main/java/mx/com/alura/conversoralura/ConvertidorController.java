@@ -70,7 +70,6 @@ public class ConvertidorController implements Initializable {
 
     @FXML
     public void reset(Event event) {
-        System.out.println(event);
-        entrada.setText("");
+        entrada.selectAll();
     }
 }
